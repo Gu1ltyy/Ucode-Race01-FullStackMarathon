@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <p id="rules-open">Be sure to read <a href="#" id="rules">rules</a> before game.</p>
+
+    <div id="about">
+        <h1>Welcome, <span id="login"></span></h1><br>
+
+        <div id="stats">
+            <div class="stat">
+                <span class="stat-value" id="totalGames"></span>
+                <span class="stat-label">Total Games</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="wins"></span>
+                <span class="stat-label">Wins</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="losses"></span>
+                <span class="stat-label">Losses</span>
+            </div>
+        </div><br>
+        <p id="message"></p><br>
+
+        <button id="start">Start Game</button><br>
+
+        <button onclick="location.href='/logout'">Logout</button>
+        <button type="button" onclick="window.location.href='/settings'">Settings</button>
+    </div>
+
+    <p><u id="inGame"></u></p>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 id="h3-rules">Rules</h3>
+            <hr id="hr-rule">
+            <h4 id="h4-rules">
+                <ul>
+                    <li>The number of rounds in the game is unlimited.</li>
+                    <li>The right of the first move is determined randomly.</li>
+                    <li>Victory is considered a complete loss of opponent's hp.</li>
+                    <li>You only have a minute to do a your turn. After the minute is up, you will lose and your opponent will win.</li>
+                    <li>Each player has 3 cards. When you use the attack or ability of a certain card 3 or more times 
+                        - it will be replaced by another random card in next round.</li>
+                    <li>There are 8 units of energy per round:</li>
+                    <p id="subList">- Each ability uses 2 energy,<br/>
+                    - Hit 3 energy,<br/>
+                    - Switch 1 energy.<br/></p>
+                    <li>The player has the opportunity to press the "Next Round" button 
+                        if he wants to end his moves in the current one (for example, due to running out of energy).</li>
+                    <li>One card can use only one ability per round.</li>
+                    <li>Abilities do not stack.
+                    If several abilities are activated on one character, the buff is taken from the first one.</li>
+                    <li>Character switching and hitting count as a turn, using an ability does not.</li>
+                    <li>If a player leaves the game, the victory is awarded to his opponent.</li>
+                    
+                </ul>
+                </h4>
+            <button id="goBack">Back</button>
+        </div>
+    </div>
+
+
+    <script src="profile.js"></script>
+</body>
+</html>

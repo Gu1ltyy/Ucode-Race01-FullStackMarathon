@@ -1,0 +1,269 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #503A3A;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.left-panel {
+    position: relative;
+    width: 20%;
+    color: white;
+    background-color: #2E2828;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+#room-name {
+    color: red;
+    border-bottom: 1px solid red;
+    padding-bottom: 2vh;
+    font-size: 2.44vh;
+}
+
+img {
+    width: 10vw;
+    height: 20vh;
+    object-fit: cover;
+}
+
+#player1-avatar{
+    margin-top: -0.5vh;
+}
+
+#player1-login, #player2-login {
+    font-size: 2.45vh;
+    color: #FEF4F4;
+}
+
+#player1-energy, #player2-energy {
+    color: #FEF4F4;
+    font-size: 1.6vh;
+}
+
+#player1-hp, #player2-hp {
+    color: #FEF4F4;
+    border-bottom: 1px solid red;
+    padding-bottom: 2.05vh;
+    font-size: 1.6vh;
+}
+
+button {
+    display: block;
+    padding: 10px 1.08vw;
+    background-color: #F65151; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#next-round, #surrender {
+    font-size: 3.1vh;
+    margin-top: 1.55vh;
+}
+
+#buttons-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-panel {
+    float: right;
+}
+
+.button-container-right {
+    background-color: #2E2828;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    height: 18.7vh;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid red;
+}
+
+.button-container-right button {
+    font-size: 3.1vh;
+    height: 5.2vh;
+    margin-top: 7vh;
+}
+
+.option {
+    border-radius: 50%;
+}
+
+#turn-indicator-div {
+    background-color: #2E2828;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 7.27vw;
+    padding: 0px 1.08vw;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    color: red;
+    font-size: 2.05vh;
+    text-align: center;
+}
+
+#timer-div {
+    background-color: #2E2828;
+    position: absolute;
+    right: 0;
+    top: 6.29vh;
+    width: 7.27vw;
+    padding: 0px 1.08vw;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    color: red;
+    font-size: 2.05vh;
+    text-align: center;
+}
+
+.enemy-cards-div, .own-cards-div {
+    display: flex;
+    justify-content: space-between;
+    width: 33vw;
+    margin-left: 23.5vw;
+}
+
+.enemy-cards-div {
+    margin-top: -1px;
+}
+
+.own-cards-div {
+    position: absolute;
+    bottom: 18.7vh;
+}
+
+#enemy-card-1 img, #enemy-card-2 img, #enemy-card-3 img, #own-card-1 img, #own-card-2 img, #own-card-3 img {
+    height: 10vh;
+    width: 5vw;
+}
+
+#enemy-card-1, #enemy-card-2, #enemy-card-3, #own-card-1, #own-card-2, #own-card-3 {
+    background-color: #2E2828;
+    border: 1px solid red;
+    color: #FEF4F4;
+    padding: 1vh 1.08vw;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+#enemy-card-1-stats-div, #enemy-card-2-stats-div, #enemy-card-3-stats-div, #own-card-1-stats-div, #own-card-2-stats-div, #own-card-3-stats-div {
+    display: flex;
+    margin-top: -1vh;
+}
+
+#enemy-card-1-stats-div p, #enemy-card-2-stats-div p, #enemy-card-3-stats-div p, #own-card-1-stats-div p, #own-card-2-stats-div p, #own-card-3-stats-div p {
+    padding: 0px 5px;
+    font-size: 1.4vh;
+}
+
+#enemy-card-1-ability, #enemy-card-2-ability, #enemy-card-3-ability, #own-card-1-ability, #own-card-2-ability, #own-card-3-ability {
+    margin-top: -0.5vh;
+    font-size: 1.6vh;
+}
+
+#enemy-card-1-name, #enemy-card-2-name, #enemy-card-3-name, #own-card-1-name, #own-card-2-name, #own-card-3-name {
+    font-size: 1.6vh;
+}
+
+#info-text-field-div {
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23vw;
+    margin-top: 12vh;
+    top: 35.9vh;
+    text-align: center;
+    color: red;
+    text-shadow: 2px 2px #2E2828;
+    font-size: 3.2vh;
+}
+
+#info-text-field {
+    text-align: center;
+}
+
+button.choseBtn {
+    background-color: #a52e2e;
+    cursor: default;
+}
+button.choseBtn:active {
+    transform: none;
+}
+
+#ability-div {
+    background-color: #2E2828;
+    position: absolute;
+    right: 0;
+    bottom: 18.7vh;
+    width: 7.27vw;
+    padding: 0px 1.08vw;
+    border-left: 1px solid red;
+    border-top: 1px solid red;
+    color: red;
+    font-size: 1.7vh;
+    text-align: center;
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #FEF4F4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 60vw;
+    top: 40vh;
+    transform: translate(-50%, -50%);
+    max-width: 20vw;
+    width: 100%;
+}
+
+#p-surrend {
+    color: black;
+    font-size: 1.8vh;
+}
+
+#confirmSurrender {
+    order: -1;
+}
+
+#cancelSurrender {
+    margin-left: auto;
+    margin-top: -35px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="settingsForm">
+        <span>Settings</span><br><br>
+        <label for="login">Login</label><br>
+        <input type="text" id="login" name="login" required><br>
+        <label for="password">New password</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="confirmPassword">Confirm New Password</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br>
+        <label for="fullName">Full Name</label><br>
+        <input type="text" id="fullName" name="fullName" required><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required>
+        <p id="message"></p><br>
+        <button type="submit">Update info</button>
+        <button type="button" onclick="window.location.href='/profile'">Go back</button>
+    </form>
+
+    <p>Want to delete your account? <a href="#" id="deleteAccount">Delete Account</a></p>
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <p id="p-delete">Confirm deleting</p>
+            <p id="p-delete">Are you sure you want to delete your account? <u>This action cannot be undone.</u></p><br>
+            <button id="confirmDelete">Delete</button>
+            <button id="cancelDelete">Cancel</button>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

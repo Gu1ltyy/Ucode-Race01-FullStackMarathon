@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="registerForm">
+        <span>Registration form</span><br><br>
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="login" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirmPassword">Confirm Password:</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <p id="message"></p><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="/login">Login here</a></p>
+
+    <script src="register.js"></script>
+</body>
+</html>
